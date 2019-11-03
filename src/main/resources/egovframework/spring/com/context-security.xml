@@ -23,9 +23,9 @@
  	<security:http pattern="\A/WEB-INF/jsp/.*\Z" request-matcher="regex" security="none"/>
 
     <egov-security:config id="securityConfig"
-		loginUrl="/uat/uia/egovLoginUsr.do"
+		loginUrl="/cm/login/login.do"
 		logoutSuccessUrl="/EgovContent.do"
-		loginFailureUrl="/uat/uia/egovLoginUsr.do?login_error=1"
+		loginFailureUrl="/cm/login/login.do?login_error=1"
 		accessDeniedUrl="/sec/ram/accessDenied.do"
 
 		dataSource="egov.dataSource"

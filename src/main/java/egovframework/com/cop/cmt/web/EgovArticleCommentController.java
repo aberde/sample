@@ -86,7 +86,7 @@ public class EgovArticleCommentController {
         Boolean isAuthenticated = EgovUserDetailsHelper.isAuthenticated();
 
         if(!isAuthenticated) {
-            return "egovframework/com/uat/uia/EgovLoginUsr";
+            return "geoai/cm/login/login";
         }
 		
 		model.addAttribute("sessionUniqId", user.getUniqId());
@@ -219,7 +219,7 @@ public class EgovArticleCommentController {
     Boolean isAuthenticated = EgovUserDetailsHelper.isAuthenticated();
 
     if(!isAuthenticated) {
-        return "egovframework/com/uat/uia/EgovLoginUsr";
+        return "geoai/cm/login/login";
     }
 
 	CommentVO articleCommentVO = new CommentVO();

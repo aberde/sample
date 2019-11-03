@@ -70,7 +70,7 @@
 <br> 
 <img src="<c:url value='/images/egovframework/com/cmm/utl/menu_empty.gif'/>" border='0' align='absbottom' alt='' >+<img src="<c:url value='/images/egovframework/com/cmm/utl/menu_empty.gif'/>" border='0' align='absbottom' alt='' ><font size=2><b>▶ 사용자인증</b></font><br> 
 <div id='div3000000'> 
-<img src="<c:url value='/images/egovframework/com/cmm/utl/menu_empty.gif'/>" border='0' align='absbottom' alt='' ><img src="<c:url value='/images/egovframework/com/cmm/utl/menu_empty.gif'/>" border='0' align='absbottom' alt='' ><img src="<c:url value='/images/egovframework/com/cmm/utl/menu_empty.gif'/>" border='0' align='absbottom' alt='' ><font size=2 class='.location'><a href=javascript:fCallUrl('/uat/uia/egovLoginUsr.do');>― 로그인</a></font><br> 
+<img src="<c:url value='/images/egovframework/com/cmm/utl/menu_empty.gif'/>" border='0' align='absbottom' alt='' ><img src="<c:url value='/images/egovframework/com/cmm/utl/menu_empty.gif'/>" border='0' align='absbottom' alt='' ><img src="<c:url value='/images/egovframework/com/cmm/utl/menu_empty.gif'/>" border='0' align='absbottom' alt='' ><font size=2 class='.location'><a href=javascript:fCallUrl('/cm/login/login.do');>― 로그인</a></font><br> 
 <img src="<c:url value='/images/egovframework/com/cmm/utl/menu_empty.gif'/>" border='0' align='absbottom' alt='' ><img src="<c:url value='/images/egovframework/com/cmm/utl/menu_empty.gif'/>" border='0' align='absbottom' alt='' ><img src="<c:url value='/images/egovframework/com/cmm/utl/menu_empty.gif'/>" border='0' align='absbottom' alt='' ><font size=2 class='.location'><a href=javascript:fCallUrl('/uat/uia/egovIdPasswordSearch.do');>― ID/PW찾기</a></font><br> 
 </div> 
 <br> 

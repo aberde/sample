@@ -80,7 +80,7 @@ public class EgovMenuCreateManageController {
 		Boolean isAuthenticated = EgovUserDetailsHelper.isAuthenticated();
 		if (!isAuthenticated) {
 			model.addAttribute("message", egovMessageSource.getMessage("fail.common.login"));
-			return "egovframework/com/uat/uia/EgovLoginUsr";
+			return "geoai/cm/login/login";
 		}
 		// 내역 조회
 		/** EgovPropertyService.sample */
@@ -137,7 +137,7 @@ public class EgovMenuCreateManageController {
 		Boolean isAuthenticated = EgovUserDetailsHelper.isAuthenticated();
 		if (!isAuthenticated) {
 			model.addAttribute("message", egovMessageSource.getMessage("fail.common.login"));
-			return "egovframework/com/uat/uia/EgovLoginUsr";
+			return "geoai/cm/login/login";
 		}
 		List<?> list_menulist = menuCreateManageService.selectMenuCreatList(menuCreatVO);
 		model.addAttribute("list_menulist", list_menulist);
@@ -164,7 +164,7 @@ public class EgovMenuCreateManageController {
 		Boolean isAuthenticated = EgovUserDetailsHelper.isAuthenticated();
 		if (!isAuthenticated) {
 			model.addAttribute("message", egovMessageSource.getMessage("fail.common.login"));
-			return "egovframework/com/uat/uia/EgovLoginUsr";
+			return "geoai/cm/login/login";
 		}
 		String[] insertMenuNo = checkedMenuNoForInsert.split(",");
 		if (insertMenuNo == null || (insertMenuNo.length == 0)) {
@@ -192,7 +192,7 @@ public class EgovMenuCreateManageController {
 		Boolean isAuthenticated = EgovUserDetailsHelper.isAuthenticated();
 		if (!isAuthenticated) {
 			model.addAttribute("message", egovMessageSource.getMessage("fail.common.login"));
-			return "egovframework/com/uat/uia/EgovLoginUsr";
+			return "geoai/cm/login/login";
 		}
 		List<?> list_menulist = menuCreateManageService.selectMenuCreatSiteMapList(menuSiteMapVO);
 		model.addAttribute("list_menulist", list_menulist);
@@ -222,7 +222,7 @@ public class EgovMenuCreateManageController {
 		Boolean isAuthenticated = EgovUserDetailsHelper.isAuthenticated();
 		if (!isAuthenticated) {
 			model.addAttribute("message", egovMessageSource.getMessage("fail.common.login"));
-			return "egovframework/com/uat/uia/EgovLoginUsr";
+			return "geoai/cm/login/login";
 		}
 
 		/*menuSiteMapVO.setTmpRootPath(EgovProperties.RELATIVE_PATH_PREFIX
@@ -277,7 +277,7 @@ public class EgovMenuCreateManageController {
 		Boolean isAuthenticated = EgovUserDetailsHelper.isAuthenticated();
 		if (!isAuthenticated) {
 			model.addAttribute("message", egovMessageSource.getMessage("fail.common.login"));
-			return "egovframework/com/uat/uia/EgovLoginUsr";
+			return "geoai/cm/login/login";
 		}
 
 		LoginVO user = (LoginVO) EgovUserDetailsHelper.getAuthenticatedUser();

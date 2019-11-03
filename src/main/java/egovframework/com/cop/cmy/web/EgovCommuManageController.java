@@ -102,7 +102,7 @@ public class EgovCommuManageController {
 		Boolean isAuthenticated = EgovUserDetailsHelper.isAuthenticated();
    	 	// KISA 보안취약점 조치 (2018-12-10, 신용호)
         if(!isAuthenticated) {
-            return "egovframework/com/uat/uia/EgovLoginUsr";
+            return "geoai/cm/login/login";
         }
 
         cmmntyVO.setEmplyrId(user.getUniqId());
@@ -156,7 +156,7 @@ public class EgovCommuManageController {
 		Boolean isAuthenticated = EgovUserDetailsHelper.isAuthenticated();
 		// KISA 보안취약점 조치 (2018-12-10, 신용호)
         if(!isAuthenticated) {
-            return "egovframework/com/uat/uia/EgovLoginUsr";
+            return "geoai/cm/login/login";
         }
 	
 		cmmntyVO.setEmplyrId(user.getUniqId());
@@ -225,7 +225,7 @@ public class EgovCommuManageController {
 		Boolean isAuthenticated = EgovUserDetailsHelper.isAuthenticated();
 		//KISA 보안취약점 조치 (2018-12-10, 신용호)
         if(!isAuthenticated) {
-            return "egovframework/com/uat/uia/EgovLoginUsr";
+            return "geoai/cm/login/login";
         }
 	
 		String retVal = "";
@@ -278,7 +278,7 @@ public class EgovCommuManageController {
 		Boolean isAuthenticated = EgovUserDetailsHelper.isAuthenticated();
 		//KISA 보안취약점 조치 (2018-12-10, 신용호)
         if(!isAuthenticated) {
-            return "egovframework/com/uat/uia/EgovLoginUsr";
+            return "geoai/cm/login/login";
         }
 		
 		//로그인한 사용자가 관리자인지 확인한다.
@@ -353,7 +353,7 @@ public class EgovCommuManageController {
 		Boolean isAuthenticated = EgovUserDetailsHelper.isAuthenticated();
    	 	// KISA 보안취약점 조치 (2018-12-10, 신용호)
         if(!isAuthenticated) {
-            return "egovframework/com/uat/uia/EgovLoginUsr";
+            return "geoai/cm/login/login";
         }
     	
 		//로그인한 사용자가 관리자인지 확인한다.
@@ -388,7 +388,7 @@ public class EgovCommuManageController {
 		Boolean isAuthenticated = EgovUserDetailsHelper.isAuthenticated();
    	 	// KISA 보안취약점 조치 (2018-12-10, 신용호)
         if(!isAuthenticated) {
-            return "egovframework/com/uat/uia/EgovLoginUsr";
+            return "geoai/cm/login/login";
         }
     	
 		//로그인한 사용자가 관리자인지 확인한다.
@@ -422,7 +422,7 @@ public class EgovCommuManageController {
    	 	// KISA 보안취약점 조치 (2018-12-10, 신용호)
 		Boolean isAuthenticated = EgovUserDetailsHelper.isAuthenticated();
         if(!isAuthenticated) {
-            return "egovframework/com/uat/uia/EgovLoginUsr";
+            return "geoai/cm/login/login";
         }
     	
 		//로그인한 사용자가 관리자인지 확인한다.
@@ -457,7 +457,7 @@ public class EgovCommuManageController {
 		Boolean isAuthenticated = EgovUserDetailsHelper.isAuthenticated();
    	 	// KISA 보안취약점 조치 (2018-12-10, 신용호)
         if(!isAuthenticated) {
-            return "egovframework/com/uat/uia/EgovLoginUsr";
+            return "geoai/cm/login/login";
         }
     	
 		//로그인한 사용자가 관리자인지 확인한다.

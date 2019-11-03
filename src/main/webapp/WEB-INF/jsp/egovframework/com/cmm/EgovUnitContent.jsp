@@ -14,7 +14,7 @@
 		${loginVO.name }<spring:message code="comCmm.unitContent.2"/> <a href="${pageContext.request.contextPath }/uat/uia/actionLogout.do"><spring:message code="comCmm.unitContent.3"/></a>
 	</c:if>
 	<c:if test="${loginVO == null }">
-		<jsp:forward page="/uat/uia/egovLoginUsr.do"/>
+		<jsp:forward page="/cm/login/login.do"/>
 	</c:if>
 	<p/><p/><p/>
 	<b><spring:message code="comCmm.unitContent.4"/><br /><br/><!-- 실행 시 오류 사항이 있으시면 표준프레임워크센터로 연락하시기 바랍니다. -->

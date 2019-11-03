@@ -41,7 +41,7 @@ function fncGoIdPwd(){
 }
 
 function fncGoLogin(){
-	location.href="<c:url value='/uat/uia/egovLoginUsr.do'/>";
+	location.href="<c:url value='/cm/login/login.do'/>";
 }
 
 </script>

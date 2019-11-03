@@ -12,7 +12,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>GEOAIRD</title>
+    <title>GEOAI</title>
     <link rel="stylesheet" type="text/css" href="<c:url value="/css/base.css" />" />
     <link rel="stylesheet" type="text/css" href="<c:url value="/css/layout.css" />" />
     <link rel="stylesheet" type="text/css" href="<c:url value="/css/common.css" />" />

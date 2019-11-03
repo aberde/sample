@@ -11,12 +11,12 @@
         <put-attribute name="content" value="" />
 <!--         <put-attribute name="footer" value="/WEB-INF/jsp/layout/default-footer.jsp" /> -->
     </definition>
-    
+
     <definition name="**/*.mainTiles" extends="main-layouts-tiles">
         <put-attribute name="content" value="/WEB-INF/jsp/{1}/{2}.jsp" />
     </definition>
     <!-- /메인화면 Layout -->
-    
+
     <!-- 기본 Layout -->
     <definition name="default-layouts-tiles" template="/WEB-INF/jsp/layout/default-layouts.jsp">
 <!--         <put-attribute name="header" value="/WEB-INF/jsp/layout/default-header.jsp" /> -->
@@ -29,18 +29,28 @@
         <put-attribute name="content" value="/WEB-INF/jsp/{1}/{2}.jsp" />
     </definition>
     <!-- /기본 Layout -->
-    
+
     <!-- 관리자 Layout -->
     <definition name="manage-layouts-tiles" template="/WEB-INF/jsp/layout/manage-layouts.jsp">
-<!--         <put-attribute name="header" value="/WEB-INF/jsp/layout/manage-header.jsp" /> -->
-<!--         <put-attribute name="left" value="/WEB-INF/jsp/layout/manage-left.jsp" /> -->
+        <put-attribute name="header" value="/WEB-INF/jsp/layout/manage-header.jsp" />
+        <put-attribute name="left" value="/WEB-INF/jsp/layout/manage-left.jsp" />
         <put-attribute name="content" value="" />
-<!--         <put-attribute name="footer" value="/WEB-INF/jsp/layout/manage-footer.jsp" /> -->
+        <put-attribute name="footer" value="/WEB-INF/jsp/layout/manage-footer.jsp" />
     </definition>
 
     <definition name="**/*.manageTiles" extends="manage-layouts-tiles">
         <put-attribute name="content" value="/WEB-INF/jsp/{1}/{2}.jsp" />
     </definition>
     <!-- /관리자 Layout -->
+
+    <!-- 팝업 Layout -->
+    <definition name="popup-layouts-tiles" template="/WEB-INF/jsp/layout/popup-layouts.jsp">
+        <put-attribute name="content" value="" />
+    </definition>
+
+    <definition name="**/*.popupTiles" extends="popup-layouts-tiles">
+        <put-attribute name="content" value="/WEB-INF/jsp/{1}/{2}.jsp" />
+    </definition>
+    <!-- /팝업 Layout -->
 
 </tiles-definitions>

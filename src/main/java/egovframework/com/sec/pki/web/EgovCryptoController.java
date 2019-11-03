@@ -63,7 +63,7 @@ public class EgovCryptoController {
     	Boolean isAuthenticated = EgovUserDetailsHelper.isAuthenticated();
     	if(!isAuthenticated) {
     		model.addAttribute("message", egovMessageSource.getMessage("fail.common.login"));
-        	return "egovframework/com/uat/uia/EgovLoginUsr";
+        	return "geoai/cm/login/login";
     	}
     	
     	String plainText = (String)commandMap.get("plainText");

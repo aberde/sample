@@ -26,8 +26,8 @@ import egovframework.com.cmm.EgovMessageSource;
 import egovframework.com.cmm.LoginVO;
 import egovframework.com.cmm.config.EgovLoginConfig;
 import egovframework.com.cmm.util.EgovUserDetailsHelper;
-import egovframework.com.uat.uia.service.EgovLoginService;
 import egovframework.rte.psl.dataaccess.util.EgovMap;
+import geoai.cm.login.service.LoginService;
 
 /**
  *
@@ -72,9 +72,9 @@ public class EgovSpringSecurityLoginFilter implements Filter {
 		loginProcessURL = loginProcessURL.replaceAll("\r", "").replaceAll("\n", "");
 
 		ApplicationContext act = WebApplicationContextUtils.getRequiredWebApplicationContext(config.getServletContext());
-		EgovLoginService loginService = (EgovLoginService) act.getBean("loginService");
+		LoginService loginService = (LoginService) act.getBean("loginService");
 		EgovLoginConfig egovLoginConfig = (EgovLoginConfig) act.getBean("egovLoginConfig");
-		
+
 		EgovMessageSource egovMessageSource = (EgovMessageSource) act.getBean("egovMessageSource");
 
 		HttpServletRequest httpRequest = (HttpServletRequest) request;
@@ -135,7 +135,7 @@ public class EgovSpringSecurityLoginFilter implements Filter {
 				if (requestURL.contains(loginProcessURL)) {
 
 					String password = httpRequest.getParameter("password");
-					
+
 					// 보안점검 후속 조치(Password 검증)
 					if (password == null || password.equals("") || password.length() < 8 || password.length() > 20) {
 						httpRequest.setAttribute("message", egovMessageSource.getMessage("fail.common.login.password",request.getLocale()));
@@ -150,14 +150,14 @@ public class EgovSpringSecurityLoginFilter implements Filter {
 					loginVO.setId(httpRequest.getParameter("id"));
 					loginVO.setPassword(password);
 					loginVO.setUserSe(httpRequest.getParameter("userSe"));
-					
+
 					//------------------------------------------------------------------
 				    // 로그인시 로그인인증제한 활성화 처리
 				    //------------------------------------------------------------------
 				    if(egovLoginConfig.isLock()){
 				        try{
 				             Map<?,?> mapLockUserInfo = (EgovMap)loginService.selectLoginIncorrect(loginVO);
-				             if(mapLockUserInfo != null){		
+				             if(mapLockUserInfo != null){
 				                //로그인인증제한 처리
 				                String sLoginIncorrectCode = loginService.processLoginIncorrect(loginVO, mapLockUserInfo);
 				                if(!sLoginIncorrectCode.equals("E")){
@@ -225,7 +225,7 @@ public class EgovSpringSecurityLoginFilter implements Filter {
 							httpRequest.setAttribute("message", egovMessageSource.getMessage("fail.common.login",request.getLocale()));
 							RequestDispatcher dispatcher = httpRequest.getRequestDispatcher(loginURL);
 							dispatcher.forward(httpRequest, httpResponse);
-							
+
 							//chain.doFilter(request, response);
 
 							return;
@@ -268,7 +268,7 @@ class RequestWrapperForSecurity extends HttpServletRequestWrapper {
 		this.username = username;
 		this.password = password;
 	}
-	
+
 	@Override
 	public String getServletPath() {
 		return ((HttpServletRequest) super.getRequest()).getContextPath() + "/egov_security_login";

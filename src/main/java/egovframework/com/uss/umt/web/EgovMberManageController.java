@@ -396,7 +396,7 @@ public class EgovMberManageController {
 	/**
 	 * 일반회원가입신청등록처리후로그인화면으로 이동한다.
 	 * @param mberManageVO 일반회원가입신청정보
-	 * @return forward:/uat/uia/egovLoginUsr.do
+	 * @return forward:/cm/login/login.do
 	 * @throws Exception
 	 */
 	@RequestMapping("/uss/umt/EgovMberSbscrb.do")
@@ -408,7 +408,7 @@ public class EgovMberManageController {
 		//mberManageVO.setGroupId("1");
 		//일반회원가입신청 등록시 일반회원등록기능을 사용하여 등록한다.
 		mberManageService.insertMber(mberManageVO);
-		return "forward:/uat/uia/egovLoginUsr.do";
+		return "forward:/cm/login/login.do";
 	}
 
 	/**

@@ -31,11 +31,6 @@ import java.lang.reflect.Method;
 import java.util.Map;
 import java.util.TreeMap;
 
-import egovframework.com.cmm.IncludedCompInfoVO;
-import egovframework.com.cmm.LoginVO;
-import egovframework.com.cmm.annotation.IncludedInfo;
-import egovframework.com.cmm.util.EgovUserDetailsHelper;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeansException;
@@ -45,6 +40,11 @@ import org.springframework.context.ApplicationContextAware;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import egovframework.com.cmm.IncludedCompInfoVO;
+import egovframework.com.cmm.LoginVO;
+import egovframework.com.cmm.annotation.IncludedInfo;
+import egovframework.com.cmm.util.EgovUserDetailsHelper;
 
 @Controller
 public class EgovComIndexController implements ApplicationContextAware, InitializingBean {
@@ -59,7 +59,7 @@ public class EgovComIndexController implements ApplicationContextAware, Initiali
 
 	public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
 		this.applicationContext = applicationContext;
-		
+
 		LOGGER.info("EgovComIndexController setApplicationContext method has called!");
 	}
 
@@ -98,10 +98,10 @@ public class EgovComIndexController implements ApplicationContextAware, Initiali
 			IncludedCompInfoVO zooVO;
 
 			/*
-			 * EgovLoginController가 AOP Proxy되는 바람에 클래스를 reflection으로 가져올 수 없음
+			 * LoginController가 AOP Proxy되는 바람에 클래스를 reflection으로 가져올 수 없음
 			 */
 			try {
-				Class<?> loginController = Class.forName("egovframework.com.uat.uia.web.EgovLoginController");
+				Class<?> loginController = Class.forName("geoai.cm.login.web.LoginController");
 				Method[] methods = loginController.getMethods();
 				for (int i = 0; i < methods.length; i++) {
 					annotation = methods[i].getAnnotation(IncludedInfo.class);
@@ -123,7 +123,7 @@ public class EgovComIndexController implements ApplicationContextAware, Initiali
 					}
 				}
 			} catch (ClassNotFoundException e) {
-				LOGGER.error("No egovframework.com.uat.uia.web.EgovLoginController!!");
+				LOGGER.error("No geoai.cm.login.web.LoginController!!");
 			}
 			/* 여기까지 AOP Proxy로 인한 코드 */
 
@@ -161,7 +161,7 @@ public class EgovComIndexController implements ApplicationContextAware, Initiali
 		}
 
 		model.addAttribute("resultList", map.values());
-		
+
 		LOGGER.debug("EgovComIndexController index is called ");
 
 		return "egovframework/com/cmm/EgovUnitLeft";

@@ -10,13 +10,13 @@
 	<aop:config>
 		<aop:aspect id="sysLogAspect" ref="syslog">
 			<!--  insert로 시작되는 service Method -->
-			<aop:around pointcut="execution(public * egovframework.com..impl.*Impl.insert*(..))" method="logInsert" />
+			<aop:around pointcut="execution(public * egovframework.com..impl.*Impl.insert*(..)) or execution(public * geoai..impl.*Impl.insert*(..))" method="logInsert" />
 			<!--  update로 시작되는 service Method -->
-			<aop:around pointcut="execution(public * egovframework.com..impl.*Impl.update*(..))" method="logUpdate" />
+			<aop:around pointcut="execution(public * egovframework.com..impl.*Impl.update*(..)) or execution(public * geoai..impl.*Impl.update*(..))" method="logUpdate" />
 			<!--  delete로 시작되는 service Method -->
-			<aop:around pointcut="execution(public * egovframework.com..impl.*Impl.delete*(..))" method="logDelete" />
+			<aop:around pointcut="execution(public * egovframework.com..impl.*Impl.delete*(..)) or execution(public * geoai..impl.*Impl.delete*(..))" method="logDelete" />
 			<!--  select로 시작되는 service Method -->
-			<aop:around pointcut="execution(public * egovframework.com..impl.*Impl.select*(..))" method="logSelect" />
+			<aop:around pointcut="execution(public * egovframework.com..impl.*Impl.select*(..)) or execution(public * geoai..impl.*Impl.select*(..))" method="logSelect" />
 		</aop:aspect>
 	</aop:config>
 

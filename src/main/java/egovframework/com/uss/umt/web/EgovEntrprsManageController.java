@@ -370,7 +370,7 @@ public class EgovEntrprsManageController {
 	/**
 	 * 기업회원가입신청 등록처리후 로그인화면으로 이동한다.
 	 * @param entrprsManageVO 기업회원가입신청정보
-	 * @return forward:/uat/uia/egovLoginUsr.do
+	 * @return forward:/cm/login/login.do
 	 * @throws Exception
 	 */
 	@RequestMapping("/uss/umt/EgovEntrprsMberSbscrb.do")
@@ -382,7 +382,7 @@ public class EgovEntrprsManageController {
 		//entrprsManageVO.setGroupId("1");
 		//기업회원가입신청 등록시 기업회원등록기능을 사용하여 등록한다.
 		entrprsManageService.insertEntrprsmber(entrprsManageVO);
-		return "forward:/uat/uia/egovLoginUsr.do";
+		return "forward:/cm/login/login.do";
 	}
 
 	/**

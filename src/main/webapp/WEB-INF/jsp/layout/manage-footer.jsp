@@ -8,12 +8,18 @@
 <%@ taglib prefix="form"    uri="http://www.springframework.org/tags/form" %>
 
     <!-- 하단 시작 -->
-    <div id="ft">
-        <div class="footer adm">
-            <div class="logo"><a href="#"><img src="<c:url value="/img/common/ft-logo.png" />" alt="mseap 로고" /></a></div>
-            <div class="siteinfo">
-                <p>Copyright ⓒ 2017 MSEAP. All Rights Reserved.</p>
+    <footer id="footer">
+        <div class="footer_txt">
+            <ul class="footer_list">
+                <li><a href="#">개인정보처리방침안내</a><em></em></li>
+                <li><a href="#">저작권 정책</a><em></em></li>
+                <li><a href="#">이메일무단수집거부</a></li>
+            </ul>
+            <div class="footer_info">
+                <address>(51435) 경상남도 창원시 의창구 중앙대로 151 (용호동)</address>
+                <p class="tel">Tel : 055)225-2114</p>
+                <p class="copyright">COPYRIGHT 2019. CHANGWON CITY. ALL RIGHTS RESERVED</p>
             </div>
         </div>
-    </div>    
+    </footer>
     <!-- 하단 끝 -->

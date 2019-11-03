@@ -2,10 +2,6 @@ package egovframework.com.uat.sso.filter;
 
 import java.io.IOException;
 
-import egovframework.com.cmm.LoginVO;
-import egovframework.com.uat.sso.service.EgovSSOService;
-import egovframework.com.uat.uia.service.EgovLoginService;
-
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
 import javax.servlet.FilterConfig;
@@ -20,6 +16,10 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.NoSuchBeanDefinitionException;
 import org.springframework.context.ApplicationContext;
 import org.springframework.web.context.support.WebApplicationContextUtils;
+
+import egovframework.com.cmm.LoginVO;
+import egovframework.com.uat.sso.service.EgovSSOService;
+import geoai.cm.login.service.LoginService;
 
 /**
  *
@@ -62,7 +62,7 @@ public class EgovSSOLoginFilter implements Filter {
 			LOGGER.error("No SSO ServiceImpl Class!");
 		}
 
-		EgovLoginService loginService = (EgovLoginService) act.getBean("loginService");
+		LoginService loginService = (LoginService) act.getBean("loginService");
 
 		HttpServletRequest httpRequest = (HttpServletRequest) request;
 		HttpSession session = httpRequest.getSession();

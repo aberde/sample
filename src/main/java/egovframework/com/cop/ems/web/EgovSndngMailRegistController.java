@@ -95,7 +95,7 @@ public class EgovSndngMailRegistController {
         Boolean isAuthenticated = EgovUserDetailsHelper.isAuthenticated();
 
         if(!isAuthenticated) {
-            return "egovframework/com/uat/uia/EgovLoginUsr";
+            return "geoai/cm/login/login";
         }
 
 		List<FileVO> _result = new ArrayList<FileVO>();

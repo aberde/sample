@@ -72,7 +72,7 @@ public class EgovBkmkMenuManageController {
         Boolean isAuthenticated = EgovUserDetailsHelper.isAuthenticated();
 
         if(!isAuthenticated) {
-            return "egovframework/com/uat/uia/EgovLoginUsr";
+            return "geoai/cm/login/login";
         }
 
         bkmkMenuManageVO.setPageUnit(propertyService.getInt("pageUnit"));
@@ -130,7 +130,7 @@ public class EgovBkmkMenuManageController {
 
         if(!isAuthenticated) {
             //    model.addAttribute("message", egovMessageSource.getMessage("fail.common.login"));
-            return "egovframework/com/uat/uia/EgovLoginUsr";
+            return "geoai/cm/login/login";
         }
 
         String [] temp = checkMenuIds.split(",");
@@ -248,7 +248,7 @@ public class EgovBkmkMenuManageController {
         Boolean isAuthenticated = EgovUserDetailsHelper.isAuthenticated();
 
         if(!isAuthenticated) {
-            return "egovframework/com/uat/uia/EgovLoginUsr";
+            return "geoai/cm/login/login";
         }
 
         beanValidator.validate(bkmkMenuManage, bindingResult);
@@ -281,7 +281,7 @@ public class EgovBkmkMenuManageController {
         Boolean isAuthenticated = EgovUserDetailsHelper.isAuthenticated();
 
         if(!isAuthenticated) {
-               return "egovframework/com/uat/uia/EgovLoginUsr";
+               return "geoai/cm/login/login";
         }
 
         bkmkMenuManageVO.setFirstIndex(0);

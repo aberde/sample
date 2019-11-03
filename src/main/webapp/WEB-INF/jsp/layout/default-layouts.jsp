@@ -7,39 +7,46 @@
 <%@ taglib prefix="spring"  uri="http://www.springframework.org/tags" %>
 <%@ taglib prefix="form"    uri="http://www.springframework.org/tags/form" %>
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>MSEAP</title>
-    <link rel="stylesheet" type="text/css" href="<c:url value="/css/base.css" />" />
-    <link rel="stylesheet" type="text/css" href="<c:url value="/css/layout.css" />" />
-    <link rel="stylesheet" type="text/css" href="<c:url value="/css/common.css" />" />
-    <link rel="stylesheet" type="text/css" href="<c:url value="/css/index.css" />" />
-    <link rel="stylesheet" type="text/css" href="<c:url value="/css/sub.css" />" />
-    <link rel="stylesheet" type="text/css" href="<c:url value="/css/jquery.bxslider.css" />" />
-    <script type="text/javascript" src="<c:url value="/js/jquery-1.11.0.min.js" />"></script>
-    <script type="text/javascript" src="<c:url value="/js/common.js" />"></script>
-    <script type="text/javascript" src="<c:url value="/js/main.js" />"></script>
-    <script type="text/javascript" src="<c:url value="/js/sub.js" />"></script>
-    <script type="text/javascript" src="<c:url value="/js/jquery.bxslider.js" />"></script>
-    <!--[if lte IE 8]>
-    <script type="text/javascript" src="<c:url value="/js/html5.js" />"></script>
-    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="author" content="창원시"/>
+    <meta name="description" content="창원시">
+    <meta name="keywords" content="창원시">
+
+    <title>국공유지 모니터링 시스템</title>
+
+    <!-- CSS -->
+    <link media="all" type="text/css" rel="stylesheet" href="<c:url value="/css/font.css" />" />
+    <link media="all" type="text/css" rel="stylesheet" href="<c:url value="/css/base.css" />" />
+    <link media="all" type="text/css" rel="stylesheet" href="<c:url value="/css/layout.css" />" />
+
+    <!-- JS -->
+    <script type="text/javascript" src="<c:url value="/js/jquery-3.4.1.min.js" />"></script>
 </head>
 <body>
+    <div id="skip_menu">
+        <h1>바로가기 메뉴</h1>
+        <ul>
+            <li><a href="#content">본문 바로가기</a></li>
+            <li><a href="#menu">주메뉴 바로가기</a></li>
+        </ul>
+    </div>
     <div id="wrap">
-<%--         <tiles:insertAttribute name="header"/> --%>
+        <tiles:insertAttribute name="header"/>
         <!-- 콘텐츠 시작  -->
 	    <div id="container">
 	        <div id="contents">
-<%-- 		        <tiles:insertAttribute name="left"/> --%>
+		        <tiles:insertAttribute name="left"/>
 		        <tiles:insertAttribute name="content"/>
 		    </div>
-	    </div>    
+	    </div>
 	    <!-- 콘텐츠 끝 -->
-<%--         <tiles:insertAttribute name="footer"/> --%>
+        <tiles:insertAttribute name="footer"/>
     </div>
 </body>
 </html>
