@@ -46,10 +46,10 @@
 		concurrentExpiredUrl="/EgovContent.do"
 
 		defaultTargetUrl="/EgovContent.do"
-		
+
 		sniff="true"
-		xframeOptions="SAMEORIGIN" 
-		xssProtection="true" 
+		xframeOptions="SAMEORIGIN"
+		xssProtection="true"
 		csrf="false"
 	/>
 
@@ -76,18 +76,16 @@
 			SELECT a.ROLE_PTTRN uri, b.AUTHOR_CODE authority
 			FROM COMTNROLEINFO a, COMTNAUTHORROLERELATE b
 			WHERE a.ROLE_CODE = b.ROLE_CODE
-			AND a.ROLE_TY = 'regex'  
+			AND a.ROLE_TY = 'regex'
 			ORDER BY a.ROLE_SORT"
 	/>
 
 	<egov-security:initializer id="initializer" supportMethod="true" supportPointcut="false" />
 
     <!-- URL에 세미콜론(semicolon)허용 여부(기본값/false) -->
-	<!-- 
 	<bean id="egovStrictHttpFirewall" class="org.springframework.security.web.firewall.StrictHttpFirewall">
 		<property name="allowSemicolon" value="true"/>
 	</bean>
 	<security:http-firewall ref="egovStrictHttpFirewall"/>
-	-->
 
 </beans>

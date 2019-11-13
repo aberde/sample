@@ -147,11 +147,11 @@ public class BoardController {
     public String selectBoardList(@ModelAttribute("searchVO") BoardVO boardVO, ModelMap model) throws Exception {
 		LoginVO user = (LoginVO)EgovUserDetailsHelper.getAuthenticatedUser();
 
-		Boolean isAuthenticated = EgovUserDetailsHelper.isAuthenticated();	//KISA 보안취약점 조치 (2018-12-10, 이정은)
-
-        if(!isAuthenticated) {
-            return "geoai/cm/login/login";
-        }
+//		Boolean isAuthenticated = EgovUserDetailsHelper.isAuthenticated();	//KISA 보안취약점 조치 (2018-12-10, 이정은)
+//
+//        if(!isAuthenticated) {
+//            return "geoai/cm/login/login";
+//        }
 
 		BoardMasterVO vo = new BoardMasterVO();
 
